@@ -10,7 +10,8 @@ def selectionSort(arr):
             arr[i], arr[minIndex] = arr[minIndex], arr[i]
     return arr
 
-arr = [1,5,8,9,3,5,7,2,1]
+
+arr = [1, 5, 8, 9, 3, 5, 7, 2, 1]
 selectionSort(arr)
 print("排序之后的数组===>")
 print(arr)
