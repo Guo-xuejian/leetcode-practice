@@ -1,4 +1,6 @@
 def swap(a,b):
+	s = a
+	print(id(s))
 	print("中")
 	print(id(a))
 	a, b = b, a
