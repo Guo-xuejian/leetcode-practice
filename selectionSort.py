@@ -15,3 +15,15 @@ arr = [1, 5, 8, 9, 3, 5, 7, 2, 1]
 selectionSort(arr)
 print("排序之后的数组===>")
 print(arr)
+
+
+def quickSort(arr):
+    pivot = arr[0]
+    left, right = [], []
+    for i in range(1, len(arr)):
+        if arr[i] > pivot:
+            right.append(arr[i])
+        else:
+            left.append(arr[i])
+    
+    return quickSort(left) + [pivot] + quickSort(right)

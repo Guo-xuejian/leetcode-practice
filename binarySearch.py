@@ -7,7 +7,7 @@ def binarySearch(arr, target):
 		step += 1
 		if low <= high:
 			mid = (low + high) / 2
-			guess =arr[mid]
+			guess = arr[mid]
 			if guess == target:
 				print(f"共查找了{}词\n", step)
 				return mid
