@@ -8,8 +8,12 @@ import (
 func main() {
 	arr := [2]int{1, 2}
 	test := arr[1:]
-	fmt.Println(test)
+	test[0] = 200
+	fmt.Println(test, arr)
 	fmt.Println(reflect.TypeOf(test))
+	test1 := make([]int, 4)
+	copy(test1, arr[:])
+	fmt.Println("test1", test1)
 	src := []int{1, 2, 3, 4, 5}
 	dst := make([]int, 6)
 
