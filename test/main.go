@@ -73,15 +73,35 @@ import (
 // 	wg.Done()
 // }
 
-func test(x interface{}) {
-	if x == nil {
-		fmt.Println("nil interface")
-		return
-	}
-	fmt.Println("non-nil interface")
-}
+// func test(x interface{}) {
+// 	if x == nil {
+// 		fmt.Println("nil interface")
+// 		return
+// 	}
+// 	fmt.Println("non-nil interface")
+// }
+
+// func main() {
+// 	var x *int = nil
+// 	test(x)
+// }
 
 func main() {
-	var x *int = nil
-	test(x)
+	testMap := make(map[bool]int)
+	testSlice := make([]int, 1)
+	mapModfiy(testMap)
+	fmt.Printf("%p\n", testMap)
+	sliceModify(testSlice)
+	fmt.Printf("%p\n", testSlice)
+	fmt.Println(testMap, &testSlice)
+}
+
+func mapModfiy(testMap map[bool]int) {
+	testMap[true] = 1
+	fmt.Printf("%p\n", testMap)
+}
+
+func sliceModify(testSlice []int) {
+	testSlice[0] = 100
+	fmt.Printf("%p\n", testSlice)
 }
