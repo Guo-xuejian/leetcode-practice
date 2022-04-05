@@ -17,19 +17,19 @@ func bubbleSort(arr [5]int) {
 	// return arr
 }
 
-func main() {
-	arr := [5]int{11, 33, 6, 5, 1}
-	// arr = bubbleSort(arr)
-	// fmt.Println(arr)
-	// go func() {
+// func main() {
+// 	arr := [5]int{11, 33, 6, 5, 1}
+// 	// arr = bubbleSort(arr)
+// 	// fmt.Println(arr)
+// 	// go func() {
 
-	// }()
-	for {
-		go bubbleSort(arr)
-	}
-	fmt.Println("The Program Start !")
-	// for i := 0; i < 6; i++ {
-	// 	go fmt.Println(i)
-	// }
-	// time.Sleep(100000)
-}
+// 	// }()
+// 	for {
+// 		go bubbleSort(arr)
+// 	}
+// 	fmt.Println("The Program Start !")
+// 	// for i := 0; i < 6; i++ {
+// 	// 	go fmt.Println(i)
+// 	// }
+// 	// time.Sleep(100000)
+// }

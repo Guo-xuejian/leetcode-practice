@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 // 递归 Recursion
 // 设立基线条件 Base Case
 // 确定 Recursive Case
@@ -12,11 +10,11 @@ import "fmt"
 // 1. 找到一个简单的基线条件（Base Case）
 // 2. 把问题分开处理，直到它变成基线条件
 
-func main() {
-	total := sum([]int{1, 2, 3, 4, 5, 6, 7})
-	fmt.Println("数组加总的结果=====>")
-	fmt.Println(total)
-}
+// func main() {
+// 	total := sum([]int{1, 2, 3, 4, 5, 6, 7})
+// 	fmt.Println("数组加总的结果=====>")
+// 	fmt.Println(total)
+// }
 
 func sum(arr []int) int {
 	if len(arr) == 0 {

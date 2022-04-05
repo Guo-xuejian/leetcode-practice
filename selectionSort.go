@@ -1,13 +1,11 @@
 package main
 
-import "fmt"
-
-func main() {
-	arr := []int{6, 4, 7, 9, 3, 1, 4, 5, 3, 2}
-	arr  = selectionSort(arr)
-	fmt.Println("排序之后的数组==========>")
-	fmt.Println(arr)
-}
+// func main() {
+// 	arr := []int{6, 4, 7, 9, 3, 1, 4, 5, 3, 2}
+// 	arr  = selectionSort(arr)
+// 	fmt.Println("排序之后的数组==========>")
+// 	fmt.Println(arr)
+// }
 
 func findSmallest(arr []int) int {
 	smallest := arr[0]
