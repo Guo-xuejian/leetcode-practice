@@ -1,8 +1,6 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 // func main() {
 // 	a := [3]int{1, 2, 3}
@@ -86,22 +84,40 @@ import (
 // 	test(x)
 // }
 
+// func main() {
+// 	testMap := make(map[bool]int)
+// 	testSlice := make([]int, 1)
+// 	mapModfiy(testMap)
+// 	fmt.Printf("%p\n", testMap)
+// 	sliceModify(testSlice)
+// 	fmt.Printf("%p\n", testSlice)
+// 	fmt.Println(testMap, &testSlice)
+// }
+
+// func mapModfiy(testMap map[bool]int) {
+// 	testMap[true] = 1
+// 	fmt.Printf("%p\n", testMap)
+// }
+
+// func sliceModify(testSlice []int) {
+// 	testSlice[0] = 100
+// 	fmt.Printf("%p\n", testSlice)
+// }
+
 func main() {
-	testMap := make(map[bool]int)
-	testSlice := make([]int, 1)
-	mapModfiy(testMap)
-	fmt.Printf("%p\n", testMap)
-	sliceModify(testSlice)
-	fmt.Printf("%p\n", testSlice)
-	fmt.Println(testMap, &testSlice)
-}
+	arr1 := [3]int{1, 2, 3}
+	arr2 := arr1
+	arr2[0] = 100
+	fmt.Println(arr1, arr2)
 
-func mapModfiy(testMap map[bool]int) {
-	testMap[true] = 1
-	fmt.Printf("%p\n", testMap)
-}
+	arr3 := []int{1, 2, 3, 4}
+	arr4 := arr3
+	arr4 = append(arr4, 89) // 扩容了，指向发生改变
+	arr4[0] = 100
+	fmt.Println(arr3, arr4)
 
-func sliceModify(testSlice []int) {
-	testSlice[0] = 100
-	fmt.Printf("%p\n", testSlice)
+	map1 := map[int]int{1: 1}
+	map2 := map1
+	map2[2] = 2
+	fmt.Println(map1, map2)
 }
