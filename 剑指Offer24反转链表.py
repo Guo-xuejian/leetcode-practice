@@ -31,3 +31,12 @@ class Solution:
         
         return recur(head, None)   
 
+class Solution:
+    def reverseList(self, head: ListNode) -> ListNode:
+        dummy_node = None
+        while head:
+            temp = head.next
+            head.next = dummy_node
+            dummy_node = head
+            head = temp
+        return dummy_node
