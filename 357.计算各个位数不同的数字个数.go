@@ -13,10 +13,12 @@ func countNumbersWithUniqueDigits(n int) int {
 		return 10
 	}
 	res, curr := 10, 9.
-	for i := 0; i < n - 1; i++ {
+	for i := 0; i < n-1; i++ {
 		curr *= 9 - i
 		res += curr
 	}
+	return res
 }
+
 // @lc code=end
 
