@@ -35,3 +35,12 @@ class Solution:
                             index] = res[length - 1 - index], res[index]
             index += 1
         return res
+
+# 2022-04-13
+# class Solution:
+#     def reversePrint(self, head: ListNode) -> List[int]:
+#         res = []
+#         while head:
+#             res.append(head.val)
+#             head = head.next
+#         return res[::-1]

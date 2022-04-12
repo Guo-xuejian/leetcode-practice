@@ -34,3 +34,16 @@ func reversePrint(head *ListNode) (res []int) {
 	}
 	return
 }
+
+// 2022-04-13
+// func reversePrint(head *ListNode) (res []int) {
+//     for head != nil {
+//         res = append(res, head.Val)
+//         head = head.Next
+//     }
+//     m := len(res)
+//     for i := 0; i < m / 2; i++ {
+//         res[i], res[m - 1 - i] = res[m - 1 - i], res[i]
+//     }
+//     return
+// }
