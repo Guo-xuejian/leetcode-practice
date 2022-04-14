@@ -22,3 +22,16 @@ func findRepeatNumber(nums []int) int {
 	}
 	return -1 // 无所谓，只是需要一个返回值保证程序编译通过
 }
+
+// 2022-04-15
+// func findRepeatNumber(nums []int) int {
+//     numMap := map[int]struct{}{}
+//     for _, num := range nums {
+//         if _, ok := numMap[num]; ok {
+//             return num
+//         } else {
+//             numMap[num] = struct{}{}
+//         }
+//     }
+//     return -1
+// }

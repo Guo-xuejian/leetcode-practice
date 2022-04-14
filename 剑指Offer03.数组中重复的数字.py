@@ -21,3 +21,14 @@ class Solution:
         for i in range(1, len(nums)):
             if nums[i] == nums[i - 1]:
                 return nums[i]
+
+# 2022-04-15
+# class Solution:
+#     def findRepeatNumber(self, nums: List[int]) -> int:
+#         num_dict = {}
+#         for num in nums:
+#             if num not in num_dict:
+#                 num_dict[num] = 1
+#             else:
+#                 return num
+#         return -1
