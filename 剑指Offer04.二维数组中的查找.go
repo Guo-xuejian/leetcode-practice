@@ -54,3 +54,33 @@ func findNumberIn2DArray(matrix [][]int, target int) bool {
 	// 没找到
 	return false
 }
+
+// 2022-04-16
+// func findNumberIn2DArray(matrix [][]int, target int) bool {
+//     if len(matrix) == 0 || len(matrix[0]) == 0{
+//         return false
+//     }
+//     m, n := len(matrix), len(matrix[0])
+//     for i := 0; i < m; i++ {
+//         if matrix[i][0] <= target && matrix[i][n - 1] >= target {
+//             // 此处开始二分查找
+//             left, right := 0, n - 1
+//             for left <= right {
+//                 mid := left + (right - left) / 2
+//                 curr := matrix[i][mid]
+//                 if curr == target {
+//                     return true
+//                 } else if curr > target {
+//                     right = mid - 1
+//                 } else {
+//                     left = mid + 1
+//                 }
+//             }
+//         } else if matrix[i][0] > target {
+//             return false
+//         } else if matrix[i][n - 1] < target {
+//             continue
+//         }
+//     }
+//     return false
+// }
