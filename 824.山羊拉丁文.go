@@ -37,5 +37,32 @@ func tranfser(index int, word string) string {
 	return word
 }
 
+// 2022-04-21
+// 执行用时：0 ms, 在所有 Go 提交中击败了100.00%的用户
+// 内存消耗：2.2 MB, 在所有 Go 提交中击败了33.33%的用户
+// func toGoatLatin(sentence string) string {
+//     vowelLetterMap := map[byte]struct{}{
+//         'a': struct{}{}, 'e': struct{}{}, 'i': struct{}{}, 'o': struct{}{}, 'u': struct{}{},
+//         'A': struct{}{}, 'E': struct{}{}, 'I': struct{}{}, 'O': struct{}{}, 'U': struct{}{},
+//     }
+//     var GoatLatinTranslate func(word string) string
+//     GoatLatinTranslate = func(word string) string {
+//         if _, ok := vowelLetterMap[word[0]]; ok {
+//             return word + "ma"
+//         } else {
+//             // word[0] 直接拼接时会被认作 byte
+//             return word[1:] + word[0:1] + "ma"
+//         }
+//     }
+//     sentenceSlice := strings.Split(sentence, " ")
+//     for idx, word := range sentenceSlice {
+//         suffix := ""
+//         for i := 0; i < idx + 1; i++ {
+//             suffix += "a"
+//         }
+//         sentenceSlice[idx] = GoatLatinTranslate(word) + suffix
+//     }
+//     return strings.Join(sentenceSlice, " ")
+// }
 // @lc code=end
 
