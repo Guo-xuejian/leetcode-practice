@@ -45,3 +45,30 @@ func (h *hp) Pop() (res interface{}) {
     *h, res = (*h)[:h.Len()-1], (*h)[h.Len()-1]
     return
 }
+
+
+// 2022-04-28
+// func getLeastNumbers(arr []int, k int) (res []int) {
+//     h := hp(arr)
+//     heap.Init(&h)
+//     for k > 0 {
+//         res = append(res, (heap.Pop(&h)).(int))
+//         k--
+//     }
+//     return
+// }
+
+// type hp []int
+
+// func (h hp) Len() int { return len(h) }
+
+// func (h hp) Less(i, j int) bool { return h[i] < h[j] }
+
+// func (h hp) Swap(i, j int) { h[i], h[j] = h[j], h[i] }
+
+// func (h *hp) Push(num interface{}) { *h = append(*h, num.(int)) }
+
+// func (h *hp) Pop() (res interface{}) {
+//     *h, res = (*h)[:h.Len()-1], (*h)[h.Len()-1]
+//     return
+// }
