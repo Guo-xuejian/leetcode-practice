@@ -21,5 +21,7 @@ class Solution:
             if is_prefix and len(word1) > len(word2):
                 return False
         return True
+
+# 2022-05-17同
 # @lc code=end
 
