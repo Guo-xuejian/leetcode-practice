@@ -7,5 +7,8 @@
 # @lc code=start
 class Solution:
     def minMoves2(self, nums: List[int]) -> int:
+        nums.sort()
+        middle_num = nums[len(nums) // 2]
+        return sum(abs(num - middle_num) for num in nums)
 # @lc code=end
 
