@@ -5,8 +5,16 @@
  */
 
 // @lc code=start
-func heightChecker(heights []int) int {
-
+func heightChecker(heights []int) (res int) {
+	expected := append([]int(nil), heights...)
+	sort.Ints(expected)
+	for i, v := range expected {
+		if v != heights[i] {
+			res++
+		}
+	}
+	return
 }
+
 // @lc code=end
 
