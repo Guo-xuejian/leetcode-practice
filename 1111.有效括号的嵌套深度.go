@@ -5,8 +5,10 @@
  */
 
 // @lc code=start
+package main
+
 func maxDepthAfterSplit(seq string) []int {
-
+	return []int{}
 }
-// @lc code=end
 
+// @lc code=end

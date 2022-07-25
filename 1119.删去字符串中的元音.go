@@ -14,6 +14,7 @@
 
 // 1 <= S.length <= 1000
 // s 仅由小写英文字母组成
+package main
 
 func removeVowels(s string) string {
 	tempSlice := []byte{}

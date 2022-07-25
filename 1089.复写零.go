@@ -5,6 +5,8 @@
  */
 
 // @lc code=start
+package main
+
 func duplicateZeros(arr []int) {
 	n := len(arr)
 	top := 0
@@ -35,4 +37,3 @@ func duplicateZeros(arr []int) {
 }
 
 // @lc code=end
-

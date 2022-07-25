@@ -5,6 +5,8 @@
  */
 
 // @lc code=start
+package main
+
 func prefixesDivBy5(nums []int) []bool {
 	res := make([]bool, len(nums))
 	preNum := 0

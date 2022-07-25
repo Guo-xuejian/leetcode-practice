@@ -13,6 +13,14 @@
  *     Right *TreeNode
  * }
  */
+package main
+
+type TreeNode struct {
+	Val   int
+	Left  *TreeNode
+	Right *TreeNode
+}
+
 func sumRootToLeaf(root *TreeNode) (res int) {
 	// 标准的 dfs
 	var dfs func(node *TreeNode, curr int)
@@ -41,4 +49,3 @@ func sumRootToLeaf(root *TreeNode) (res int) {
 }
 
 // @lc code=end
-

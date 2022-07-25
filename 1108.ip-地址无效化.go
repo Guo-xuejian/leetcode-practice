@@ -5,9 +5,12 @@
  */
 
 // @lc code=start
+package main
+
+import "strings"
+
 func defangIPaddr(address string) string {
 	return strings.ReplaceAll(address, ".", "[.]")
 }
 
 // @lc code=end
-

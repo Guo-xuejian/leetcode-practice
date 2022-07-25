@@ -5,6 +5,8 @@
  */
 
 // @lc code=start
+package main
+
 func isEscapePossible(blocked [][]int, source []int, target []int) bool {
 	bound, block, max, dir := 1000000, map[int]bool{}, len(blocked)*(len(blocked)-1)/2, [][]int{{0, 1}, {1, 0}, {0, -1}, {-1, 0}}
 	for _, b := range blocked {

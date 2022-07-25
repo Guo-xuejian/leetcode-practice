@@ -5,6 +5,8 @@
  */
 
 // @lc code=start
+package main
+
 func canThreePartsEqualSum(arr []int) bool {
 	var arrSum int
 	for _, v := range arr { // 计算总和

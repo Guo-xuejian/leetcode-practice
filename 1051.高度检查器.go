@@ -5,6 +5,10 @@
  */
 
 // @lc code=start
+package main
+
+import "sort"
+
 func heightChecker(heights []int) (res int) {
 	expected := append([]int(nil), heights...)
 	sort.Ints(expected)
@@ -17,4 +21,3 @@ func heightChecker(heights []int) (res int) {
 }
 
 // @lc code=end
-

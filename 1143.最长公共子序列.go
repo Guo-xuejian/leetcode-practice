@@ -5,6 +5,8 @@
  */
 
 // @lc code=start
+package main
+
 func longestCommonSubsequence(text1 string, text2 string) (maxLength int) {
 	text1Length := len(text1)
 	text2Length := len(text2)
@@ -32,4 +34,3 @@ func max(x, y int) int {
 }
 
 // @lc code=end
-

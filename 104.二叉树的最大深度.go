@@ -13,6 +13,8 @@
  *     Right *TreeNode
  * }
  */
+package main
+
 func maxDepth(root *TreeNode) int {
 	// 从两个分支中选出一个最大的，对于子节点也是如此，递归调用即可
 	if root != nil {

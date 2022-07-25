@@ -13,6 +13,8 @@
  *     Right *TreeNode
  * }
  */
+package main
+
 func hasPathSum(root *TreeNode, targetSum int) bool {
 	if root == nil {
 		return false
@@ -24,4 +26,3 @@ func hasPathSum(root *TreeNode, targetSum int) bool {
 }
 
 // @lc code=end
-

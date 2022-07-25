@@ -5,6 +5,8 @@
  */
 
 // @lc code=start
+package main
+
 func gridIllumination(n int, lamps, queries [][]int) []int {
     type pair struct{ x, y int }
     points := map[pair]bool{}

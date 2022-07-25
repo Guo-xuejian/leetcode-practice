@@ -5,6 +5,8 @@
  */
 
 // @lc code=start
+package main
+
 func maxScoreSightseeingPair(values []int) int {
 	maxScore, mx := 0, values[0]+0
 	for j := 1; j < len(values); j++ {

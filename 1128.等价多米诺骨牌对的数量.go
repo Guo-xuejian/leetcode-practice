@@ -5,6 +5,8 @@
  */
 
 // @lc code=start
+package main
+
 func numEquivDominoPairs(dominoes [][]int) (res int) {
 	num := [100]int{}
 	val := 0
@@ -22,4 +24,3 @@ func numEquivDominoPairs(dominoes [][]int) (res int) {
 }
 
 // @lc code=end
-

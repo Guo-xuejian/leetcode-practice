@@ -5,6 +5,8 @@
  */
 
 // @lc code=start
+package main
+
 func maxArea(height []int) int {
 	// 初始化最大值 左右边界
 	max, start, end := 0, 0, len(height)-1
@@ -35,4 +37,3 @@ func maxArea(height []int) int {
 }
 
 // @lc code=end
-

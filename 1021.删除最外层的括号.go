@@ -5,6 +5,8 @@
  */
 
 // @lc code=start
+package main
+
 func removeOuterParentheses(s string) string {
 	var ans, st []rune
 	for _, c := range s {
