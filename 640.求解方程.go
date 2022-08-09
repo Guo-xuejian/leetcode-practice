@@ -44,5 +44,64 @@ func splitLine(line string) (x, num int) {
 
 }
 
+// 2022-08-10
+func solveEquation(equation string) (res string) {
+	equation = strings.Replace(equation, "-", "+-", -1)
+	allSlice := strings.Split(equation, "=")
+	left, right := strings.Split(allSlice[0], "+"), strings.Split(allSlice[1], "+")
+	varNum, constNum := 0, 0
+	currLength := 0
+	for _, one := range left {
+		if one == "" {
+			continue
+		}
+		currLength = len(one)
+		if one[currLength-1] == 'x' {
+			varNum += getNum(one[:currLength-1])
+		} else {
+			constNum -= getNum(one)
+		}
+	}
+	for _, one := range right {
+		if one == "" {
+			continue
+		}
+		currLength = len(one)
+		if one[currLength-1] == 'x' {
+			varNum -= getNum(one[:currLength-1])
+		} else {
+			constNum += getNum(one)
+		}
+	}
+	if varNum == 0 && constNum == 0 {
+		res = "Infinite solutions"
+	} else if varNum == 0 {
+		res = "No solution"
+	} else {
+		res = "x=" + strconv.Itoa(constNum/varNum)
+	}
+	return
+}
+
+func getNum(numString string) (res int) {
+	if numString == "" {
+		return 1
+	} else if numString == "-" {
+		return -1
+	}
+	multi := 1
+	for i := len(numString) - 1; i >= 0; i-- {
+		if numString[i] == '+' {
+			continue
+		} else if numString[i] == '-' {
+			res *= -1
+		} else {
+			res += int(byte(numString[i])-'0') * multi
+			multi *= 10
+		}
+	}
+	return
+}
+
 // @lc code=end
 
