@@ -13,5 +13,16 @@ func shuffle(nums []int, n int) (res []int) {
 	return
 }
 
+// 2022-08-29
+func shuffle(nums []int, n int) (res []int) {
+	res = make([]int, 2*n)
+	// half is enough
+	for idx := range nums[:n] {
+		res[2*idx] = nums[idx]
+		res[2*idx+1] = nums[n+idx]
+	}
+	return
+}
+
 // @lc code=end
 
